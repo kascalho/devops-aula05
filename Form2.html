@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Formulários HTML5 - Exercício 2</title>
+
+  <link rel="shortcut icon" type="image/png" href="lib/jasmine/jasmine_favicon.png">
+  <link rel="stylesheet" href="lib/jasmine/jasmine.css">
+
+  <script src="lib/jasmine/jasmine.js"></script>
+  <script src="lib/jasmine/jasmine-html.js"></script>
+  <script src="lib/jasmine/boot.js"></script>
+
+  <!-- include spec files here... -->
+  <script src="spec/Form2Spec.js"></script> 
+</head>
+<body>
+    <!--
+    FORM2 - Formulário de Contato
+
+        Construa um formulário de contato que tenha os seguintes campos:
+        -- E-mail: deve ser obrigatório e deve validar e-mails corretamente. Use o nome de campo 'email'.
+        -- Assunto: deve ser uma caixa de seleção obrigatória com uma opção vazia e outras três opções: Problemas, Reclamação e Sugestão. Use o nome de campo 'assunto'.
+        -- Mensagem: deve ser uma caixa de texto de múltiplas linhas obrigatória. Use o nome de campo 'mensagem'.
+        -- Tipo de Resposta: deve ser uma lista de opções de múltipla escolha visíveis, não obrigatória, com as opções: Telefone (valor T), E-mail (valor E) ou Correio (valor C).
+        Use o nome de campo 'tipo-resposta'.
+        -- Botão de Submissão: deve possuir o texto Enviar.
+    -->
+    <!-----
+    <form id="form2">
+
+    </form>
+</body>
+</html>
+-->
+<form id="form2" method="POST">
+  <main>
+      <h1>Entre em Contato</h1>
+      
+        <!--forma de fazer mail-->
+        <div>
+           <label for="mail">E-mail:</label>
+            <input id="mail" name="email" type="email" placeholder="Digite seu e-mail" required/>
+        </div> 
+
+          <!--forma de ASSUNTO-->
+        <div> 
+            <label for="campo-assunto">Assunto:</label>
+             <select id="campo-assunto" name="assunto" required>
+               <option value=""></option>
+               <option value="Problemas">Problemas</option>
+               <option value="Reclamação">Reclamação</option>
+               <option value="Sugestão">Sugestão</option>
+             </select>
+            
+        </div>
+
+           <!--forma de mansagem-->     
+        <div>
+          <label for="menssagem">Campo Mensagem:</label>
+           <textarea id="menssagem" name="mensagem" placeholder="Digite sua mansagem..." required> </textarea>
+        </div>
+        <div>
+          <fieldset>
+            <legend> tipo de resposta</legend>
+            <label for="campo-resposta-telefone">Telefone</label>
+            <input type="checkbox" name="tipo-resposta" id="campo-resposta-telefone" value="T">
+            <label for="campo-resposta-email">E-mail</label>
+            <input type="checkbox" name="tipo-resposta" id="campo-resposta-email" value="E">
+            <Label for="campo-resposta">Correio</Label>
+            <input type="checkbox" name="tipo-resposta" id="campo-resposta" value="C">
+         </fieldset>>
+        </div>
+
+         <!--forma de buton--> 
+         <div>
+          <button> Enviar </button>
+       </div>
+
+      </form>
+    </main>
+  </form>
+</body>
+</html>
+

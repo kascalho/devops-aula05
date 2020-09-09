@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Formulários HTML5 - Exercício 3</title>
+
+  <link rel="shortcut icon" type="image/png" href="lib/jasmine/jasmine_favicon.png">
+  <link rel="stylesheet" href="lib/jasmine/jasmine.css">
+
+  <script src="lib/jasmine/jasmine.js"></script>
+  <script src="lib/jasmine/jasmine-html.js"></script>
+  <script src="lib/jasmine/boot.js"></script>
+
+  <!-- include spec files here... -->
+  <script src="spec/Form3Spec.js"></script> 
+</head>
+<body>
+   <!--
+    FORM3 - Formulário de Perfil
+
+    Construa um formulário de perfil de usuário que tenha os seguintes campos:
+     -- Nome Completo: deve ser obrigatório e deve conter no máximo 120 caracteres. Use o nome de campo 'nome-completo'.
+     -- Nascimento: deve ser obrigatório e deve pegar a data de nascimento (sem horas). Use o nome de campo 'nascimento'.
+     -- Perfil Github: deve ser não obrigatório e permitir apenas URL's válidas. Use o nome de campo 'github'.
+     -- Sexo: deve ser uma lista de opções de escolha única visível obrigatória, com as opções: Masculino (valor M) e Feminino (valor F). Use o nome de campo 'sexo'.
+     -- Botão de Submissão: deve possuir o texto Salvar.
+    -->
+    <h1>
+      Faca o seu login
+    </h1>
+
+    <form method="POST" id="form3">
+
+      <div>
+        <label for="nome"> Nome Completo </label>
+        <input id="nome" name="nome completo" type="text"  maxlength="120" obrigatório />
+
+      </div>
+      <div>
+        <label for="data"> nascimento </label>
+        <input id="data" name="nascimento" type="date" />
+      </div>
+      <div>
+        <label for="url"> github </label>
+        <input id="url" name="github" type="url" />
+      </div>
+        <div>
+          
+          <fieldset>
+            <legend> sexo </legend>
+            <label for="sexo"> Masculino </label>
+            <input id="sexo" name="Masculino" type="checkbox" value="M" />
+            <label for="sexo"> Feminino </label>
+            <input id="sexo" name="Feminino" type="checkbox" value="F" />
+          </fieldset>
+          
+        </div>
+      <div>
+          <button>Salvar</button>
+      </div>
+
+
+
+    </form>
+
+    
+
+</body>
+</html>
+
